@@ -1,0 +1,11 @@
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\bin\Debug\Demo.exe.config
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\bin\Debug\Demo.exe
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\bin\Debug\Demo.pdb
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.csproj.AssemblyReference.cache
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.csproj.SuggestedBindingRedirects.cache
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.Form1.resources
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.Properties.Resources.resources
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.csproj.GenerateResource.cache
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.exe
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.pdb
