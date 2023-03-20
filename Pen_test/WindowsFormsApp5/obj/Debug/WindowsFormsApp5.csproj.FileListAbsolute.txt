@@ -1,0 +1,22 @@
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\Demo.Form1.resources
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Properties.Resources.resources
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.exe
+C:\Users\USER\Desktop\Personal Project\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\obj\Debug\Demo.Form1.resources
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Properties.Resources.resources
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.exe
+C:\Users\USER\Desktop\draw\Pen_test\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb
