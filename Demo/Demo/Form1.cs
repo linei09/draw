@@ -25,12 +25,15 @@ namespace Demo
         Bitmap bm;
         Graphics g;
         bool paint = false;
-        Point px, py, p1, p2;
-        Pen p = new Pen(Color.Black, 1);
+        Point px, py;
+        Pen p1 = new Pen(Color.Black, 1);
+        Pen p2 = new Pen(Color.Black, 5);
+        Pen p3 = new Pen(Color.Black, 10);
         Pen eraser1 = new Pen(Color.White,10);
         Pen eraser2 = new Pen(Color.White,30);
         Pen eraser3 = new Pen(Color.White,50);
-        Rectangle rect;
+        ColorDialog cd = new ColorDialog();
+        Color new_color;
         int index;
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,12 +129,6 @@ namespace Demo
                     g.DrawLine(eraser1, px, py);
                     py = px;
                 }
-                if (index == 4)
-                {
-                    px = e.Location;
-                    g.DrawLine(p, px, py);
-                    py = px;
-                }
                 if (index == 2)
                 {
                     px = e.Location;
@@ -144,7 +141,25 @@ namespace Demo
                     g.DrawLine(eraser3, px, py);
                     py = px;
                 }
-               
+                if (index == 4)
+                {
+                    px = e.Location;
+                    g.DrawLine(p1, px, py);
+                    py = px;
+                }
+                if (index == 5)
+                {
+                    px = e.Location;
+                    g.DrawLine(p2, px, py);
+                    py = px;
+                }
+                if (index == 6)
+                {
+                    px = e.Location;
+                    g.DrawLine(p3, px, py);
+                    py = px;
+                }
+
             }
             pictureBox1.Refresh();
         }
@@ -192,22 +207,72 @@ namespace Demo
 
         private void _circle_Click(object sender, EventArgs e)
         {
-            index = 5;
+            
+        }
+
+        private void back_pen_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = false;
         }
 
         private void _retangle_Click(object sender, EventArgs e)
         {
-            index = 6;
+            
         }
 
         private void _polygons_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void size_pen_1_Click(object sender, EventArgs e)
+        {
+            index = 4;
+        }
+
+        private void size_pen_2_Click(object sender, EventArgs e)
+        {
+            index = 5;
+        }
+
+        private void size_pen_3_Click(object sender, EventArgs e)
+        {
+            index = 6;
+        }
+
+        private void back_color_Click(object sender, EventArgs e)
+        {
+            panel6.Visible = false;
+        }
+
+        private void _Color_Click(object sender, EventArgs e)
+        {
+            cd.ShowDialog();
+            new_color=cd.Color;
+            _Color.BackColor = cd.Color;
+            p1.Color = cd.Color;
+            p2.Color = cd.Color;
+            p3.Color = cd.Color;
+        }
+
+        private void color_red_Click(object sender, EventArgs e)
+        {
             index = 7;
+        }
+
+        private void color_blue_Click(object sender, EventArgs e)
+        {
+            index = 8;
+        }
+
+        private void color_yellow_Click(object sender, EventArgs e)
+        {
+            index = 9;
         }
 
         private void Pen_Click(object sender, EventArgs e)
         {
-            index = 4;
+            panel5.Visible = true;
         }
     }
 }

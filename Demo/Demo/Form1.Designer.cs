@@ -53,6 +53,24 @@ namespace Demo
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.back_pen = new System.Windows.Forms.Button();
+            this.size_pen_3 = new System.Windows.Forms.Button();
+            this.size_pen_2 = new System.Windows.Forms.Button();
+            this.size_pen_1 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.back_polygons = new System.Windows.Forms.Button();
+            this._polygons = new System.Windows.Forms.Button();
+            this._retangle = new System.Windows.Forms.Button();
+            this._circle = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.back_eraser = new System.Windows.Forms.Button();
+            this.size_eraser_3 = new System.Windows.Forms.Button();
+            this.size_eraser_2 = new System.Windows.Forms.Button();
+            this.size_eraser_1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this._text = new System.Windows.Forms.Button();
@@ -60,26 +78,24 @@ namespace Demo
             this.Polygons = new System.Windows.Forms.Button();
             this.Eraser = new System.Windows.Forms.Button();
             this.Pen = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.size_eraser_1 = new System.Windows.Forms.Button();
-            this.size_eraser_2 = new System.Windows.Forms.Button();
-            this.size_eraser_3 = new System.Windows.Forms.Button();
-            this.back_eraser = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.back_polygons = new System.Windows.Forms.Button();
-            this._polygons = new System.Windows.Forms.Button();
-            this._retangle = new System.Windows.Forms.Button();
-            this._circle = new System.Windows.Forms.Button();
+            this.color_red = new System.Windows.Forms.Button();
+            this.color_blue = new System.Windows.Forms.Button();
+            this.color_yellow = new System.Windows.Forms.Button();
+            this.back_color = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -250,164 +266,81 @@ namespace Demo
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(100, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 510);
             this.panel1.TabIndex = 5;
             // 
-            // pictureBox1
+            // panel5
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 510);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Controls.Add(this.back_pen);
+            this.panel5.Controls.Add(this.size_pen_3);
+            this.panel5.Controls.Add(this.size_pen_2);
+            this.panel5.Controls.Add(this.size_pen_1);
+            this.panel5.Location = new System.Drawing.Point(1120, 150);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(60, 210);
+            this.panel5.TabIndex = 5;
+            this.panel5.Visible = false;
             // 
-            // panel2
+            // pictureBox4
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this._text);
-            this.panel2.Controls.Add(this._Color);
-            this.panel2.Controls.Add(this.Polygons);
-            this.panel2.Controls.Add(this.Eraser);
-            this.panel2.Controls.Add(this.Pen);
-            this.panel2.Location = new System.Drawing.Point(1124, 180);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(60, 210);
-            this.panel2.TabIndex = 7;
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
             // 
-            // _text
+            // back_pen
             // 
-            this._text.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_text.BackgroundImage")));
-            this._text.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this._text.Location = new System.Drawing.Point(15, 170);
-            this._text.Name = "_text";
-            this._text.Size = new System.Drawing.Size(30, 30);
-            this._text.TabIndex = 4;
-            this._text.UseVisualStyleBackColor = true;
+            this.back_pen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back_pen.BackgroundImage")));
+            this.back_pen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.back_pen.Location = new System.Drawing.Point(15, 170);
+            this.back_pen.Name = "back_pen";
+            this.back_pen.Size = new System.Drawing.Size(30, 30);
+            this.back_pen.TabIndex = 3;
+            this.back_pen.UseVisualStyleBackColor = true;
+            this.back_pen.Click += new System.EventHandler(this.back_pen_Click);
             // 
-            // _Color
+            // size_pen_3
             // 
-            this._Color.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_Color.BackgroundImage")));
-            this._Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this._Color.Location = new System.Drawing.Point(15, 130);
-            this._Color.Name = "_Color";
-            this._Color.Size = new System.Drawing.Size(30, 30);
-            this._Color.TabIndex = 3;
-            this._Color.UseVisualStyleBackColor = true;
+            this.size_pen_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_pen_3.BackgroundImage")));
+            this.size_pen_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.size_pen_3.Location = new System.Drawing.Point(15, 130);
+            this.size_pen_3.Name = "size_pen_3";
+            this.size_pen_3.Size = new System.Drawing.Size(30, 30);
+            this.size_pen_3.TabIndex = 2;
+            this.size_pen_3.UseVisualStyleBackColor = true;
+            this.size_pen_3.Click += new System.EventHandler(this.size_pen_3_Click);
             // 
-            // Polygons
+            // size_pen_2
             // 
-            this.Polygons.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Polygons.BackgroundImage")));
-            this.Polygons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Polygons.Location = new System.Drawing.Point(15, 90);
-            this.Polygons.Name = "Polygons";
-            this.Polygons.Size = new System.Drawing.Size(30, 30);
-            this.Polygons.TabIndex = 2;
-            this.Polygons.UseVisualStyleBackColor = true;
-            this.Polygons.Click += new System.EventHandler(this.Polygons_Click);
+            this.size_pen_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_pen_2.BackgroundImage")));
+            this.size_pen_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.size_pen_2.Location = new System.Drawing.Point(15, 90);
+            this.size_pen_2.Name = "size_pen_2";
+            this.size_pen_2.Size = new System.Drawing.Size(30, 30);
+            this.size_pen_2.TabIndex = 1;
+            this.size_pen_2.UseVisualStyleBackColor = true;
+            this.size_pen_2.Click += new System.EventHandler(this.size_pen_2_Click);
             // 
-            // Eraser
+            // size_pen_1
             // 
-            this.Eraser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Eraser.BackgroundImage")));
-            this.Eraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Eraser.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Eraser.Location = new System.Drawing.Point(15, 50);
-            this.Eraser.Name = "Eraser";
-            this.Eraser.Size = new System.Drawing.Size(30, 30);
-            this.Eraser.TabIndex = 1;
-            this.Eraser.UseVisualStyleBackColor = true;
-            this.Eraser.Click += new System.EventHandler(this.Eraser_Click);
-            // 
-            // Pen
-            // 
-            this.Pen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pen.BackgroundImage")));
-            this.Pen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Pen.Location = new System.Drawing.Point(15, 10);
-            this.Pen.Name = "Pen";
-            this.Pen.Size = new System.Drawing.Size(30, 30);
-            this.Pen.TabIndex = 0;
-            this.Pen.UseVisualStyleBackColor = true;
-            this.Pen.Click += new System.EventHandler(this.Pen_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.back_eraser);
-            this.panel3.Controls.Add(this.size_eraser_3);
-            this.panel3.Controls.Add(this.size_eraser_2);
-            this.panel3.Controls.Add(this.size_eraser_1);
-            this.panel3.Location = new System.Drawing.Point(1124, 180);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(60, 210);
-            this.panel3.TabIndex = 1;
-            this.panel3.Visible = false;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // size_eraser_1
-            // 
-            this.size_eraser_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_eraser_1.BackgroundImage")));
-            this.size_eraser_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.size_eraser_1.Location = new System.Drawing.Point(15, 50);
-            this.size_eraser_1.Name = "size_eraser_1";
-            this.size_eraser_1.Size = new System.Drawing.Size(30, 30);
-            this.size_eraser_1.TabIndex = 0;
-            this.size_eraser_1.UseVisualStyleBackColor = true;
-            this.size_eraser_1.Click += new System.EventHandler(this.size_eraser_1_Click);
-            // 
-            // size_eraser_2
-            // 
-            this.size_eraser_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_eraser_2.BackgroundImage")));
-            this.size_eraser_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.size_eraser_2.Location = new System.Drawing.Point(15, 90);
-            this.size_eraser_2.Name = "size_eraser_2";
-            this.size_eraser_2.Size = new System.Drawing.Size(30, 30);
-            this.size_eraser_2.TabIndex = 1;
-            this.size_eraser_2.UseVisualStyleBackColor = true;
-            this.size_eraser_2.Click += new System.EventHandler(this.size_eraser_2_Click);
-            // 
-            // size_eraser_3
-            // 
-            this.size_eraser_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_eraser_3.BackgroundImage")));
-            this.size_eraser_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.size_eraser_3.Location = new System.Drawing.Point(15, 130);
-            this.size_eraser_3.Name = "size_eraser_3";
-            this.size_eraser_3.Size = new System.Drawing.Size(30, 30);
-            this.size_eraser_3.TabIndex = 2;
-            this.size_eraser_3.UseVisualStyleBackColor = true;
-            this.size_eraser_3.Click += new System.EventHandler(this.size_eraser_3_Click);
-            // 
-            // back_eraser
-            // 
-            this.back_eraser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back_eraser.BackgroundImage")));
-            this.back_eraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.back_eraser.Location = new System.Drawing.Point(15, 170);
-            this.back_eraser.Name = "back_eraser";
-            this.back_eraser.Size = new System.Drawing.Size(30, 30);
-            this.back_eraser.TabIndex = 3;
-            this.back_eraser.UseVisualStyleBackColor = true;
-            this.back_eraser.Click += new System.EventHandler(this.back_eraser_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.size_pen_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_pen_1.BackgroundImage")));
+            this.size_pen_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.size_pen_1.Location = new System.Drawing.Point(15, 50);
+            this.size_pen_1.Name = "size_pen_1";
+            this.size_pen_1.Size = new System.Drawing.Size(30, 30);
+            this.size_pen_1.TabIndex = 0;
+            this.size_pen_1.UseVisualStyleBackColor = true;
+            this.size_pen_1.Click += new System.EventHandler(this.size_pen_1_Click);
             // 
             // panel4
             // 
@@ -417,7 +350,7 @@ namespace Demo
             this.panel4.Controls.Add(this._polygons);
             this.panel4.Controls.Add(this._retangle);
             this.panel4.Controls.Add(this._circle);
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(1120, 150);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(60, 210);
             this.panel4.TabIndex = 5;
@@ -478,12 +411,236 @@ namespace Demo
             this._circle.UseVisualStyleBackColor = true;
             this._circle.Click += new System.EventHandler(this._circle_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.back_eraser);
+            this.panel3.Controls.Add(this.size_eraser_3);
+            this.panel3.Controls.Add(this.size_eraser_2);
+            this.panel3.Controls.Add(this.size_eraser_1);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(60, 210);
+            this.panel3.TabIndex = 1;
+            this.panel3.Visible = false;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // back_eraser
+            // 
+            this.back_eraser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back_eraser.BackgroundImage")));
+            this.back_eraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.back_eraser.Location = new System.Drawing.Point(15, 170);
+            this.back_eraser.Name = "back_eraser";
+            this.back_eraser.Size = new System.Drawing.Size(30, 30);
+            this.back_eraser.TabIndex = 3;
+            this.back_eraser.UseVisualStyleBackColor = true;
+            this.back_eraser.Click += new System.EventHandler(this.back_eraser_Click);
+            // 
+            // size_eraser_3
+            // 
+            this.size_eraser_3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_eraser_3.BackgroundImage")));
+            this.size_eraser_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.size_eraser_3.Location = new System.Drawing.Point(15, 130);
+            this.size_eraser_3.Name = "size_eraser_3";
+            this.size_eraser_3.Size = new System.Drawing.Size(30, 30);
+            this.size_eraser_3.TabIndex = 2;
+            this.size_eraser_3.UseVisualStyleBackColor = true;
+            this.size_eraser_3.Click += new System.EventHandler(this.size_eraser_3_Click);
+            // 
+            // size_eraser_2
+            // 
+            this.size_eraser_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_eraser_2.BackgroundImage")));
+            this.size_eraser_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.size_eraser_2.Location = new System.Drawing.Point(15, 90);
+            this.size_eraser_2.Name = "size_eraser_2";
+            this.size_eraser_2.Size = new System.Drawing.Size(30, 30);
+            this.size_eraser_2.TabIndex = 1;
+            this.size_eraser_2.UseVisualStyleBackColor = true;
+            this.size_eraser_2.Click += new System.EventHandler(this.size_eraser_2_Click);
+            // 
+            // size_eraser_1
+            // 
+            this.size_eraser_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("size_eraser_1.BackgroundImage")));
+            this.size_eraser_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.size_eraser_1.Location = new System.Drawing.Point(15, 50);
+            this.size_eraser_1.Name = "size_eraser_1";
+            this.size_eraser_1.Size = new System.Drawing.Size(30, 30);
+            this.size_eraser_1.TabIndex = 0;
+            this.size_eraser_1.UseVisualStyleBackColor = true;
+            this.size_eraser_1.Click += new System.EventHandler(this.size_eraser_1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1000, 510);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this._text);
+            this.panel2.Controls.Add(this._Color);
+            this.panel2.Controls.Add(this.Polygons);
+            this.panel2.Controls.Add(this.Eraser);
+            this.panel2.Controls.Add(this.Pen);
+            this.panel2.Location = new System.Drawing.Point(1120, 150);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(60, 210);
+            this.panel2.TabIndex = 7;
+            // 
+            // _text
+            // 
+            this._text.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_text.BackgroundImage")));
+            this._text.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this._text.Location = new System.Drawing.Point(15, 170);
+            this._text.Name = "_text";
+            this._text.Size = new System.Drawing.Size(30, 30);
+            this._text.TabIndex = 4;
+            this._text.UseVisualStyleBackColor = true;
+            // 
+            // _Color
+            // 
+            this._Color.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_Color.BackgroundImage")));
+            this._Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this._Color.Location = new System.Drawing.Point(15, 130);
+            this._Color.Name = "_Color";
+            this._Color.Size = new System.Drawing.Size(30, 30);
+            this._Color.TabIndex = 3;
+            this._Color.UseVisualStyleBackColor = true;
+            this._Color.Click += new System.EventHandler(this._Color_Click);
+            // 
+            // Polygons
+            // 
+            this.Polygons.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Polygons.BackgroundImage")));
+            this.Polygons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Polygons.Location = new System.Drawing.Point(15, 90);
+            this.Polygons.Name = "Polygons";
+            this.Polygons.Size = new System.Drawing.Size(30, 30);
+            this.Polygons.TabIndex = 2;
+            this.Polygons.UseVisualStyleBackColor = true;
+            this.Polygons.Click += new System.EventHandler(this.Polygons_Click);
+            // 
+            // Eraser
+            // 
+            this.Eraser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Eraser.BackgroundImage")));
+            this.Eraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Eraser.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Eraser.Location = new System.Drawing.Point(15, 50);
+            this.Eraser.Name = "Eraser";
+            this.Eraser.Size = new System.Drawing.Size(30, 30);
+            this.Eraser.TabIndex = 1;
+            this.Eraser.UseVisualStyleBackColor = true;
+            this.Eraser.Click += new System.EventHandler(this.Eraser_Click);
+            // 
+            // Pen
+            // 
+            this.Pen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pen.BackgroundImage")));
+            this.Pen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pen.Location = new System.Drawing.Point(15, 10);
+            this.Pen.Name = "Pen";
+            this.Pen.Size = new System.Drawing.Size(30, 30);
+            this.Pen.TabIndex = 0;
+            this.Pen.UseVisualStyleBackColor = true;
+            this.Pen.Click += new System.EventHandler(this.Pen_Click);
+            // 
+            // color_red
+            // 
+            this.color_red.BackColor = System.Drawing.Color.Red;
+            this.color_red.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.color_red.Location = new System.Drawing.Point(15, 50);
+            this.color_red.Name = "color_red";
+            this.color_red.Size = new System.Drawing.Size(30, 30);
+            this.color_red.TabIndex = 0;
+            this.color_red.UseVisualStyleBackColor = false;
+            this.color_red.Click += new System.EventHandler(this.color_red_Click);
+            // 
+            // color_blue
+            // 
+            this.color_blue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.color_blue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.color_blue.Location = new System.Drawing.Point(15, 90);
+            this.color_blue.Name = "color_blue";
+            this.color_blue.Size = new System.Drawing.Size(30, 30);
+            this.color_blue.TabIndex = 1;
+            this.color_blue.UseVisualStyleBackColor = false;
+            this.color_blue.Click += new System.EventHandler(this.color_blue_Click);
+            // 
+            // color_yellow
+            // 
+            this.color_yellow.BackColor = System.Drawing.Color.Yellow;
+            this.color_yellow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.color_yellow.Location = new System.Drawing.Point(15, 130);
+            this.color_yellow.Name = "color_yellow";
+            this.color_yellow.Size = new System.Drawing.Size(30, 30);
+            this.color_yellow.TabIndex = 2;
+            this.color_yellow.UseVisualStyleBackColor = false;
+            this.color_yellow.Click += new System.EventHandler(this.color_yellow_Click);
+            // 
+            // back_color
+            // 
+            this.back_color.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back_color.BackgroundImage")));
+            this.back_color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.back_color.Location = new System.Drawing.Point(15, 170);
+            this.back_color.Name = "back_color";
+            this.back_color.Size = new System.Drawing.Size(30, 30);
+            this.back_color.TabIndex = 3;
+            this.back_color.UseVisualStyleBackColor = true;
+            this.back_color.Click += new System.EventHandler(this.back_color_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.LightGray;
+            this.panel6.Controls.Add(this.pictureBox5);
+            this.panel6.Controls.Add(this.back_color);
+            this.panel6.Controls.Add(this.color_yellow);
+            this.panel6.Controls.Add(this.color_blue);
+            this.panel6.Controls.Add(this.color_red);
+            this.panel6.Location = new System.Drawing.Point(890, 290);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(60, 210);
+            this.panel6.TabIndex = 6;
+            this.panel6.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 611);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
@@ -498,12 +655,16 @@ namespace Demo
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,6 +713,18 @@ namespace Demo
         private Button _polygons;
         private Button _retangle;
         private Button _circle;
+        private Panel panel5;
+        private PictureBox pictureBox4;
+        private Button back_pen;
+        private Button size_pen_3;
+        private Button size_pen_2;
+        private Button size_pen_1;
+        private Panel panel6;
+        private PictureBox pictureBox5;
+        private Button back_color;
+        private Button color_yellow;
+        private Button color_blue;
+        private Button color_red;
     }
 }
 
