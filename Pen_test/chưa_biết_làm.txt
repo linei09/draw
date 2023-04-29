@@ -1,0 +1,2 @@
+cái panel với cái pricturebox chưa biết làm sao để vẽ lền mạch được :)))
+cái select size làm sao để ấn vào nó hiện ra cái combobox, chọn xong mất combobox :))))
