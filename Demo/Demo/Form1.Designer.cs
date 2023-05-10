@@ -47,12 +47,19 @@ namespace Demo
             this.asViewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Undo = new System.Windows.Forms.Button();
             this.Redo = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.nextpage = new System.Windows.Forms.Button();
+            this.backpage = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.back_color = new System.Windows.Forms.Button();
+            this.color_yellow = new System.Windows.Forms.Button();
+            this.color_blue = new System.Windows.Forms.Button();
+            this.color_red = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.back_pen = new System.Windows.Forms.Button();
@@ -71,31 +78,24 @@ namespace Demo
             this.size_eraser_3 = new System.Windows.Forms.Button();
             this.size_eraser_2 = new System.Windows.Forms.Button();
             this.size_eraser_1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this._text = new System.Windows.Forms.Button();
             this._Color = new System.Windows.Forms.Button();
             this.Polygons = new System.Windows.Forms.Button();
             this.Eraser = new System.Windows.Forms.Button();
             this.Pen = new System.Windows.Forms.Button();
-            this.color_red = new System.Windows.Forms.Button();
-            this.color_blue = new System.Windows.Forms.Button();
-            this.color_yellow = new System.Windows.Forms.Button();
-            this.back_color = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -216,6 +216,7 @@ namespace Demo
             this.Undo.Size = new System.Drawing.Size(30, 30);
             this.Undo.TabIndex = 1;
             this.Undo.UseVisualStyleBackColor = true;
+            this.Undo.Click += new System.EventHandler(this.Undo_Click);
             // 
             // Redo
             // 
@@ -226,26 +227,29 @@ namespace Demo
             this.Redo.Size = new System.Drawing.Size(30, 30);
             this.Redo.TabIndex = 2;
             this.Redo.UseVisualStyleBackColor = true;
+            this.Redo.Click += new System.EventHandler(this.Redo_Click);
             // 
-            // button3
+            // nextpage
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(600, 550);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 20);
-            this.button3.TabIndex = 3;
-            this.button3.Text = ">";
-            this.button3.UseVisualStyleBackColor = true;
+            this.nextpage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nextpage.Location = new System.Drawing.Point(600, 550);
+            this.nextpage.Name = "nextpage";
+            this.nextpage.Size = new System.Drawing.Size(50, 20);
+            this.nextpage.TabIndex = 3;
+            this.nextpage.Text = ">";
+            this.nextpage.UseVisualStyleBackColor = true;
+            this.nextpage.Click += new System.EventHandler(this.nextpage_Click);
             // 
-            // button4
+            // backpage
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(550, 550);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 20);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "<";
-            this.button4.UseVisualStyleBackColor = true;
+            this.backpage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backpage.Location = new System.Drawing.Point(550, 550);
+            this.backpage.Name = "backpage";
+            this.backpage.Size = new System.Drawing.Size(50, 20);
+            this.backpage.TabIndex = 4;
+            this.backpage.Text = "<";
+            this.backpage.UseVisualStyleBackColor = true;
+            this.backpage.Click += new System.EventHandler(this.button4_Click);
             // 
             // openFileDialog1
             // 
@@ -272,6 +276,88 @@ namespace Demo
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 510);
             this.panel1.TabIndex = 5;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.LightGray;
+            this.panel6.Controls.Add(this.pictureBox5);
+            this.panel6.Controls.Add(this.back_color);
+            this.panel6.Controls.Add(this.color_yellow);
+            this.panel6.Controls.Add(this.color_blue);
+            this.panel6.Controls.Add(this.color_red);
+            this.panel6.Location = new System.Drawing.Point(890, 290);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(60, 210);
+            this.panel6.TabIndex = 6;
+            this.panel6.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // back_color
+            // 
+            this.back_color.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back_color.BackgroundImage")));
+            this.back_color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.back_color.Location = new System.Drawing.Point(15, 170);
+            this.back_color.Name = "back_color";
+            this.back_color.Size = new System.Drawing.Size(30, 30);
+            this.back_color.TabIndex = 3;
+            this.back_color.UseVisualStyleBackColor = true;
+            this.back_color.Click += new System.EventHandler(this.back_color_Click);
+            // 
+            // color_yellow
+            // 
+            this.color_yellow.BackColor = System.Drawing.Color.Yellow;
+            this.color_yellow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.color_yellow.Location = new System.Drawing.Point(15, 130);
+            this.color_yellow.Name = "color_yellow";
+            this.color_yellow.Size = new System.Drawing.Size(30, 30);
+            this.color_yellow.TabIndex = 2;
+            this.color_yellow.UseVisualStyleBackColor = false;
+            this.color_yellow.Click += new System.EventHandler(this.color_yellow_Click);
+            // 
+            // color_blue
+            // 
+            this.color_blue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.color_blue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.color_blue.Location = new System.Drawing.Point(15, 90);
+            this.color_blue.Name = "color_blue";
+            this.color_blue.Size = new System.Drawing.Size(30, 30);
+            this.color_blue.TabIndex = 1;
+            this.color_blue.UseVisualStyleBackColor = false;
+            this.color_blue.Click += new System.EventHandler(this.color_blue_Click);
+            // 
+            // color_red
+            // 
+            this.color_red.BackColor = System.Drawing.Color.Red;
+            this.color_red.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.color_red.Location = new System.Drawing.Point(15, 50);
+            this.color_red.Name = "color_red";
+            this.color_red.Size = new System.Drawing.Size(30, 30);
+            this.color_red.TabIndex = 0;
+            this.color_red.UseVisualStyleBackColor = false;
+            this.color_red.Click += new System.EventHandler(this.color_red_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1000, 510);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // panel5
             // 
@@ -481,18 +567,6 @@ namespace Demo
             this.size_eraser_1.UseVisualStyleBackColor = true;
             this.size_eraser_1.Click += new System.EventHandler(this.size_eraser_1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 510);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -565,75 +639,6 @@ namespace Demo
             this.Pen.UseVisualStyleBackColor = true;
             this.Pen.Click += new System.EventHandler(this.Pen_Click);
             // 
-            // color_red
-            // 
-            this.color_red.BackColor = System.Drawing.Color.Red;
-            this.color_red.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.color_red.Location = new System.Drawing.Point(15, 50);
-            this.color_red.Name = "color_red";
-            this.color_red.Size = new System.Drawing.Size(30, 30);
-            this.color_red.TabIndex = 0;
-            this.color_red.UseVisualStyleBackColor = false;
-            this.color_red.Click += new System.EventHandler(this.color_red_Click);
-            // 
-            // color_blue
-            // 
-            this.color_blue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.color_blue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.color_blue.Location = new System.Drawing.Point(15, 90);
-            this.color_blue.Name = "color_blue";
-            this.color_blue.Size = new System.Drawing.Size(30, 30);
-            this.color_blue.TabIndex = 1;
-            this.color_blue.UseVisualStyleBackColor = false;
-            this.color_blue.Click += new System.EventHandler(this.color_blue_Click);
-            // 
-            // color_yellow
-            // 
-            this.color_yellow.BackColor = System.Drawing.Color.Yellow;
-            this.color_yellow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.color_yellow.Location = new System.Drawing.Point(15, 130);
-            this.color_yellow.Name = "color_yellow";
-            this.color_yellow.Size = new System.Drawing.Size(30, 30);
-            this.color_yellow.TabIndex = 2;
-            this.color_yellow.UseVisualStyleBackColor = false;
-            this.color_yellow.Click += new System.EventHandler(this.color_yellow_Click);
-            // 
-            // back_color
-            // 
-            this.back_color.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back_color.BackgroundImage")));
-            this.back_color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.back_color.Location = new System.Drawing.Point(15, 170);
-            this.back_color.Name = "back_color";
-            this.back_color.Size = new System.Drawing.Size(30, 30);
-            this.back_color.TabIndex = 3;
-            this.back_color.UseVisualStyleBackColor = true;
-            this.back_color.Click += new System.EventHandler(this.back_color_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 10);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.LightGray;
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Controls.Add(this.back_color);
-            this.panel6.Controls.Add(this.color_yellow);
-            this.panel6.Controls.Add(this.color_blue);
-            this.panel6.Controls.Add(this.color_red);
-            this.panel6.Location = new System.Drawing.Point(890, 290);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(60, 210);
-            this.panel6.TabIndex = 6;
-            this.panel6.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,8 +648,8 @@ namespace Demo
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.backpage);
+            this.Controls.Add(this.nextpage);
             this.Controls.Add(this.Redo);
             this.Controls.Add(this.Undo);
             this.Controls.Add(this.menuStrip1);
@@ -655,16 +660,16 @@ namespace Demo
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -688,8 +693,8 @@ namespace Demo
         private System.Windows.Forms.ToolStripMenuItem asViewerToolStripMenuItem;
         private System.Windows.Forms.Button Undo;
         private System.Windows.Forms.Button Redo;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button nextpage;
+        private System.Windows.Forms.Button backpage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;

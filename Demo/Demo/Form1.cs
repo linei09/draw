@@ -12,10 +12,15 @@ namespace Demo
 {
     public partial class Form1 : Form
     {
+        Stack<PictureBox> pictureBoxStack = new Stack<PictureBox>();
+
+        private Rectangle? currentRectangle = null;
+        private Rectangle? currentEllipse = null;
         public Form1()
         {
             InitializeComponent();
 
+            pictureBoxStack.Push(pictureBox1);
             bm = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(bm);
             g.Clear(Color.White);
@@ -34,7 +39,7 @@ namespace Demo
         Pen eraser3 = new Pen(Color.White,50);
         ColorDialog cd = new ColorDialog();
         Color new_color;
-        int index;
+        int index, x, y, cX, cY, sX, sY;
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -114,9 +119,13 @@ namespace Demo
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
+            //paint
             paint = true;
             py = e.Location;
-           
+
+            //polygons
+            cX = e.X;
+            cY = e.Y;
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -159,9 +168,24 @@ namespace Demo
                     g.DrawLine(p3, px, py);
                     py = px;
                 }
+                if (index == 10)
+                {
+                    currentEllipse = new Rectangle(cX, cY, sX, sY);
+                    pictureBox1.Invalidate();
+                }
+                if (index == 11)
+                {
+                    currentRectangle = new Rectangle(cX, cY, sX, sY);
+                    pictureBox1.Invalidate();
+                }
 
             }
+
             pictureBox1.Refresh();
+            //polygons
+            x = e.X; y = e.Y;
+            sX = e.X - cX;
+            sY = e.Y - cY;
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -169,10 +193,26 @@ namespace Demo
 
             paint = false;
 
+            sX = e.X - cX;
+            sY = e.Y - cY;
+            //double size = 100.00;
+
+            if (index == 10)
+            {
+                g.DrawEllipse(p1, cX, cY, sX, sY);
+                currentEllipse = null;
+            }
+            else if (index == 11)
+            {
+                g.DrawRectangle(p1, cX, cY, sX, sY);
+                currentRectangle = null;
+            }
+            pictureBox1.Refresh();
+
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void back_eraser_Click(object sender, EventArgs e)
@@ -207,7 +247,7 @@ namespace Demo
 
         private void _circle_Click(object sender, EventArgs e)
         {
-            
+            index = 10;
         }
 
         private void back_pen_Click(object sender, EventArgs e)
@@ -217,12 +257,12 @@ namespace Demo
 
         private void _retangle_Click(object sender, EventArgs e)
         {
-            
+            index = 11;
         }
 
         private void _polygons_Click(object sender, EventArgs e)
         {
-            
+            index = 12;
         }
 
         private void size_pen_1_Click(object sender, EventArgs e)
@@ -233,6 +273,56 @@ namespace Demo
         private void size_pen_2_Click(object sender, EventArgs e)
         {
             index = 5;
+        }
+
+        private void Undo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Redo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e) //backapge
+        {
+            if (pictureBoxStack.Count > 0)
+            {
+                PictureBox p1 = new PictureBox();
+                PictureBox p2 = pictureBoxStack.Peek(); // Lấy PictureBox đang hiển thị từ đỉnh của Stack
+                p2.Visible = false;
+                p1.Width = 100;
+                p1.Height = 100;
+                p1.Image = p2.Image; // Gán hình ảnh của PictureBox trên đỉnh Stack cho PictureBox mới
+                this.Controls.Add(p1);
+                pictureBoxStack.Push(p1);
+            }
+        }
+
+        private void nextpage_Click(object sender, EventArgs e)
+        {
+            if (pictureBoxStack.Count > 1) // Kiểm tra nếu có ít nhất 2 PictureBox trong Stack mới lấy ra
+            {
+                PictureBox p2 = pictureBoxStack.Pop(); // Lấy PictureBox trên đỉnh Stack ra khỏi Stack
+                p2.Visible = false;
+                PictureBox p1 = pictureBoxStack.Peek();
+                p1.Visible = true;
+            
+            }
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            if (currentRectangle.HasValue)
+            {
+                e.Graphics.DrawRectangle(p1, currentRectangle.Value);
+            }
+
+            if (currentEllipse.HasValue)
+            {
+                e.Graphics.DrawEllipse(p1, currentEllipse.Value);
+            }
         }
 
         private void size_pen_3_Click(object sender, EventArgs e)
