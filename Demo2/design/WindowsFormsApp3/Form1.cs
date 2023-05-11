@@ -7,161 +7,367 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Mail;
-using System.Data.SqlClient;
 
-namespace WindowsFormsApp1
+namespace Demo
 {
-    public partial class createaccount : Form
+    public partial class Form1 : Form
     {
-        public createaccount()
+        Stack<PictureBox> pictureBoxStack = new Stack<PictureBox>();
+
+        private Rectangle? currentRectangle = null;
+        private Rectangle? currentEllipse = null;
+        public Form1()
         {
             InitializeComponent();
+
+            pictureBoxStack.Push(pictureBox1);
+            bm = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            g = Graphics.FromImage(bm);
+            g.Clear(Color.White);
+            pictureBox1.Image = bm;
         }
 
-        private void name_form_Click(object sender, EventArgs e)
+        Bitmap bm;
+        Graphics g;
+        bool paint = false;
+        Point px, py;
+        Pen p1 = new Pen(Color.Black, 1);
+        Pen p2 = new Pen(Color.Black, 5);
+        Pen p3 = new Pen(Color.Black, 10);
+        Pen eraser1 = new Pen(Color.White,10);
+        Pen eraser2 = new Pen(Color.White,30);
+        Pen eraser3 = new Pen(Color.White,50);
+        ColorDialog cd = new ColorDialog();
+        Color new_color;
+        int index, x, y, cX, cY, sX, sY;
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Username_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-        private void signup_Click(object sender, EventArgs e)
-        {
-            if (signup.Text == "Sign Up")
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "PNG (*.png) | *.png |PDF(*.pdf) | *.pdf | All files(*.*) | *.* ";
+            if(openFileDialog.ShowDialog()==DialogResult.OK)
             {
-                if (string.IsNullOrEmpty(text_user.Text) || string.IsNullOrEmpty(text_email.Text) || string.IsNullOrEmpty(text_pass.Text) || string.IsNullOrEmpty(text_enterpass.Text))
+                pictureBox1.Image=Image.FromFile(openFileDialog.FileName);
+            }
+           
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Save";
+            saveFileDialog.ShowDialog();
+            
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog_SaveAs = new SaveFileDialog();
+            saveFileDialog_SaveAs.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult Exit = MessageBox.Show("Want to close the program?","Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(Exit == DialogResult.Yes) { Close(); }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Eraser_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void Eraser_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void Eraser_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Eraser_MouseUp(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void Eraser_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            //paint
+            paint = true;
+            py = e.Location;
+
+            //polygons
+            cX = e.X;
+            cY = e.Y;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (paint)
+            {
+                if (index == 1)
                 {
-                    MessageBox.Show("Please enter full information");
-                    return;
+                    px = e.Location;
+                    g.DrawLine(eraser1, px, py);
+                    py = px;
                 }
-                else
-                if (username_check.Visible == true || emailcheck.Visible == true || passcheck.Visible == true || repass.Visible == true)
+                if (index == 2)
                 {
-                    MessageBox.Show("Something is not right. Please recheck");
-                    return;
+                    px = e.Location;
+                    g.DrawLine(eraser2, px, py);
+                    py = px;
                 }
-                else
+                if (index == 3)
                 {
-                    this.Hide();
-                    Login f1 = new Login();
-                    f1.Show();
-                    SqlConnection con = new SqlConnection("Data Source=MSI;Initial Catalog=MyDB;Integrated Security=True;Pooling=False");
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into UserTable values (@User,@Email,@Password )", con);
-                    cmd.Parameters.AddWithValue("@User", text_user.Text);
-                    cmd.Parameters.AddWithValue("@Email", text_email.Text);
-                    cmd.Parameters.AddWithValue("@Password", text_pass.Text);
-                    cmd.ExecuteNonQuery();
-
-                    con.Close();
-                    MessageBox.Show("Sign up successful!");
-                    // con nap len db
+                    px = e.Location;
+                    g.DrawLine(eraser3, px, py);
+                    py = px;
                 }
+                if (index == 4)
+                {
+                    px = e.Location;
+                    g.DrawLine(p1, px, py);
+                    py = px;
+                }
+                if (index == 5)
+                {
+                    px = e.Location;
+                    g.DrawLine(p2, px, py);
+                    py = px;
+                }
+                if (index == 6)
+                {
+                    px = e.Location;
+                    g.DrawLine(p3, px, py);
+                    py = px;
+                }
+                if (index == 10)
+                {
+                    currentEllipse = new Rectangle(cX, cY, sX, sY);
+                    pictureBox1.Invalidate();
+                }
+                if (index == 11)
+                {
+                    currentRectangle = new Rectangle(cX, cY, sX, sY);
+                    pictureBox1.Invalidate();
+                }
+
             }
+
+            pictureBox1.Refresh();
+            //polygons
+            x = e.X; y = e.Y;
+            sX = e.X - cX;
+            sY = e.Y - cY;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (text_user.Text.Length < 5)
+
+            paint = false;
+
+            sX = e.X - cX;
+            sY = e.Y - cY;
+            //double size = 100.00;
+
+            if (index == 10)
             {
-                username_check.Visible = true;
-
+                g.DrawEllipse(p1, cX, cY, sX, sY);
+                currentEllipse = null;
             }
-            else
-                username_check.Visible = false;
-        }
+            else if (index == 11)
+            {
+                g.DrawRectangle(p1, cX, cY, sX, sY);
+                currentRectangle = null;
+            }
+            pictureBox1.Refresh();
 
-        public bool IsValidEmail(string email)
+        }
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            try
-            {
-                var addr = new MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
+            
         }
-        private void textBox2_TextChanged(object sender, EventArgs e)
+
+        private void back_eraser_Click(object sender, EventArgs e)
         {
-            if (!IsValidEmail(text_email.Text))
-                emailcheck.Visible = true;
-
-            else
-                emailcheck.Visible = false;
+            panel3.Visible = false;
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e) // hide password
+        private void size_eraser_1_Click(object sender, EventArgs e)
         {
-            if (text_pass.Text.Length < 8)
-                passcheck.Visible = true;
-
-            else
-                passcheck.Visible = false;
+            index = 1;
         }
 
-        private void text_enterpass_TextChanged(object sender, EventArgs e)
+        private void size_eraser_2_Click(object sender, EventArgs e)
         {
-            if (string.Compare(text_enterpass.Text, text_pass.Text) != 0)
-                repass.Visible = true;
-
-            else
-                repass.Visible = false;
+            index = 2;
         }
 
-
-
-        private void singin_Click(object sender, EventArgs e)
+        private void size_eraser_3_Click(object sender, EventArgs e)
         {
-            if (singin.Text == "Sign In")
+            index = 3;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+        }
+
+        private void Polygons_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+        }
+
+        private void _circle_Click(object sender, EventArgs e)
+        {
+            index = 10;
+        }
+
+        private void back_pen_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = false;
+        }
+
+        private void _retangle_Click(object sender, EventArgs e)
+        {
+            index = 11;
+        }
+
+        private void _polygons_Click(object sender, EventArgs e)
+        {
+            index = 12;
+        }
+
+        private void size_pen_1_Click(object sender, EventArgs e)
+        {
+            index = 4;
+        }
+
+        private void size_pen_2_Click(object sender, EventArgs e)
+        {
+            index = 5;
+        }
+
+        private void Undo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Redo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e) //backapge
+        {
+            if (pictureBoxStack.Count > 0)
             {
-                this.Hide();
-                Login lg = new Login();
-                lg.Show();
+                PictureBox p1 = new PictureBox();
+                PictureBox p2 = pictureBoxStack.Peek(); // Lấy PictureBox đang hiển thị từ đỉnh của Stack
+                p2.Visible = false;
+                p1.Width = 100;
+                p1.Height = 100;
+                p1.Image = p2.Image; // Gán hình ảnh của PictureBox trên đỉnh Stack cho PictureBox mới
+                this.Controls.Add(p1);
+                pictureBoxStack.Push(p1);
             }
         }
 
-
-
-        private void showpass_CheckedChanged(object sender, EventArgs e)
+        private void nextpage_Click(object sender, EventArgs e)
         {
-            if (showpass.Checked)
+            if (pictureBoxStack.Count > 1) // Kiểm tra nếu có ít nhất 2 PictureBox trong Stack mới lấy ra
             {
-                text_pass.PasswordChar = '\0';
-            }
-            else
-            {
-                text_pass.PasswordChar = '*';
+                PictureBox p2 = pictureBoxStack.Pop(); // Lấy PictureBox trên đỉnh Stack ra khỏi Stack
+                p2.Visible = false;
+                PictureBox p1 = pictureBoxStack.Peek();
+                p1.Visible = true;
+            
             }
         }
 
-        private void showpass1_CheckedChanged(object sender, EventArgs e)
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            if (showpass1.Checked)
+            if (currentRectangle.HasValue)
             {
-                text_enterpass.PasswordChar = '\0';
+                e.Graphics.DrawRectangle(p1, currentRectangle.Value);
             }
-            else
+
+            if (currentEllipse.HasValue)
             {
-                text_enterpass.PasswordChar = '*';
+                e.Graphics.DrawEllipse(p1, currentEllipse.Value);
             }
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void size_pen_3_Click(object sender, EventArgs e)
+        {
+            index = 6;
+        }
+
+        private void back_color_Click(object sender, EventArgs e)
+        {
+            panel6.Visible = false;
+        }
+
+        private void _Color_Click(object sender, EventArgs e)
+        {
+            cd.ShowDialog();
+            new_color=cd.Color;
+            _Color.BackColor = cd.Color;
+            p1.Color = cd.Color;
+            p2.Color = cd.Color;
+            p3.Color = cd.Color;
+        }
+
+        private void color_red_Click(object sender, EventArgs e)
+        {
+            index = 7;
+        }
+
+        private void color_blue_Click(object sender, EventArgs e)
+        {
+            index = 8;
+        }
+
+        private void color_yellow_Click(object sender, EventArgs e)
+        {
+            index = 9;
+        }
+
+        private void Pen_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = true;
+        }
     }
-
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Demo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,43 +45,65 @@ namespace WindowsFormsApp1
 
             }
         }
+        private bool isValid()
+        {
+            if(text_user.Text==string.Empty || text_pass.Text==string.Empty)
+            
+                MessageBox.Show("Please enter user or password!","Error");
+            
+            return true;
+        }
+
 
         private void signin_Click(object sender, EventArgs e)
         {
-            
-            if (signin.Text == "Sign in"/* && check_signin(username.Text,password.Text) == true*/)
+            if (signin.Text == "Sign in")
             {
-                //Form2_ct f = new Form2_ct();
-                //f.Show(); // co file chinh thi doi lai thanh file chinh
-                string username, pass;
-                username = text_user.Text;
-                pass=text_pass.Text;
-                try
-                {
-                    string querry = "select * from UserTable where User = '" + text_user.Text + "' and Password = '" + text_pass.Text + "'";
-                    SqlDataAdapter sda = new SqlDataAdapter(querry,conn);
-                    DataTable dtable = new DataTable();
-                    sda.Fill(dtable);
-
-                    if(dtable.Rows.Count > 0 ) 
-                    {
-                        username = text_user.Text;
-                        pass = text_pass.Text;
-
-                    }
-                }
-                catch 
-                {
-                    MessageBox.Show("Login Error Please try again!", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    text_user.Clear();
-                    text_pass.Clear();
-                }
-                finally
-                {
-                    conn.Close();
-                }
                 this.Hide();
+                Form1 lg = new Form1();
+                lg.Show();
             }
+
+            /*if(isValid())
+            {
+                string querry = "SELECT * FROM UserTable WHERE User = '" + text_user.Text + "' AND Password = '" + text_pass.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(querry,conn);  
+            }*/
+
+            /*  string username, pass;
+              username = text_user.Text;
+              pass=text_pass.Text;
+              try
+              {
+                  string querry = "SELECT * FROM UserTable WHERE User = '" + text_user.Text + "' AND Password = '" + text_pass.Text + "'";
+                  SqlDataAdapter sda = new SqlDataAdapter(querry,conn);
+                  DataTable dtable = new DataTable();
+                  sda.Fill(dtable);
+
+                  if(dtable.Rows.Count > 0 ) 
+                  {
+                      username = text_user.Text;
+                      pass = text_pass.Text;
+                      Form2_ct f = new Form2_ct();
+                      f.Show();
+                  }
+
+                MessageBox.Show("Login successful!");
+              }
+              catch 
+              {
+                  MessageBox.Show("Login Error Please try again!", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                  text_user.Clear();
+                  text_pass.Clear();
+              }
+              finally
+              {
+                  conn.Close();
+              }
+
+              this.Hide();*/
+
+
         }
 
         private void create_Click(object sender, EventArgs e)
