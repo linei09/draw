@@ -84,6 +84,11 @@ namespace Demo
             this.Polygons = new System.Windows.Forms.Button();
             this.Eraser = new System.Windows.Forms.Button();
             this.Pen = new System.Windows.Forms.Button();
+            this._backgroundchat = new System.Windows.Forms.Panel();
+            this._boxchat = new System.Windows.Forms.ListView();
+            this._sendbox = new System.Windows.Forms.RichTextBox();
+            this._send = new System.Windows.Forms.Button();
+            this._chat = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -96,6 +101,7 @@ namespace Demo
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            this._backgroundchat.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -270,7 +276,7 @@ namespace Demo
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this._backgroundchat);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(100, 30);
             this.panel1.Name = "panel1";
@@ -285,7 +291,7 @@ namespace Demo
             this.panel6.Controls.Add(this.color_yellow);
             this.panel6.Controls.Add(this.color_blue);
             this.panel6.Controls.Add(this.color_red);
-            this.panel6.Location = new System.Drawing.Point(890, 290);
+            this.panel6.Location = new System.Drawing.Point(1120, 389);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(60, 210);
             this.panel6.TabIndex = 6;
@@ -639,11 +645,59 @@ namespace Demo
             this.Pen.UseVisualStyleBackColor = true;
             this.Pen.Click += new System.EventHandler(this.Pen_Click);
             // 
+            // _backgroundchat
+            // 
+            this._backgroundchat.BackColor = System.Drawing.Color.IndianRed;
+            this._backgroundchat.Controls.Add(this._send);
+            this._backgroundchat.Controls.Add(this._sendbox);
+            this._backgroundchat.Controls.Add(this._boxchat);
+            this._backgroundchat.Location = new System.Drawing.Point(350, 130);
+            this._backgroundchat.Name = "_backgroundchat";
+            this._backgroundchat.Size = new System.Drawing.Size(339, 229);
+            this._backgroundchat.TabIndex = 1;
+            // 
+            // _boxchat
+            // 
+            this._boxchat.HideSelection = false;
+            this._boxchat.Location = new System.Drawing.Point(3, 3);
+            this._boxchat.Name = "_boxchat";
+            this._boxchat.Size = new System.Drawing.Size(333, 166);
+            this._boxchat.TabIndex = 0;
+            this._boxchat.UseCompatibleStateImageBehavior = false;
+            // 
+            // _sendbox
+            // 
+            this._sendbox.Location = new System.Drawing.Point(3, 175);
+            this._sendbox.Name = "_sendbox";
+            this._sendbox.Size = new System.Drawing.Size(240, 50);
+            this._sendbox.TabIndex = 1;
+            this._sendbox.Text = "";
+            // 
+            // _send
+            // 
+            this._send.Location = new System.Drawing.Point(249, 188);
+            this._send.Name = "_send";
+            this._send.Size = new System.Drawing.Size(75, 23);
+            this._send.TabIndex = 2;
+            this._send.Text = "Send";
+            this._send.UseVisualStyleBackColor = true;
+            // 
+            // _chat
+            // 
+            this._chat.Location = new System.Drawing.Point(1105, 39);
+            this._chat.Name = "_chat";
+            this._chat.Size = new System.Drawing.Size(75, 23);
+            this._chat.TabIndex = 8;
+            this._chat.Text = "Chat";
+            this._chat.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 611);
+            this.Controls.Add(this._chat);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -670,6 +724,7 @@ namespace Demo
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+            this._backgroundchat.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -730,6 +785,11 @@ namespace Demo
         private Button color_yellow;
         private Button color_blue;
         private Button color_red;
+        private Panel _backgroundchat;
+        private Button _send;
+        private RichTextBox _sendbox;
+        private ListView _boxchat;
+        private Button _chat;
     }
 }
 

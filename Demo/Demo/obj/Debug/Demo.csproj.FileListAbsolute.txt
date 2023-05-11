@@ -9,3 +9,5 @@ C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technol
 C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
 C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.exe
 C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\Demo.pdb
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\WindowsFormsApp1.createaccount.resources
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo\Demo\obj\Debug\WindowsFormsApp1.Login.resources
