@@ -53,13 +53,17 @@ namespace Demo
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this._backgroundchat = new System.Windows.Forms.Panel();
+            this._send = new System.Windows.Forms.Button();
+            this._sendbox = new System.Windows.Forms.RichTextBox();
+            this._boxchat = new System.Windows.Forms.ListView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.back_color = new System.Windows.Forms.Button();
             this.color_yellow = new System.Windows.Forms.Button();
             this.color_blue = new System.Windows.Forms.Button();
             this.color_red = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.back_pen = new System.Windows.Forms.Button();
@@ -69,7 +73,7 @@ namespace Demo
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.back_polygons = new System.Windows.Forms.Button();
-            this._polygons = new System.Windows.Forms.Button();
+            this._triangle = new System.Windows.Forms.Button();
             this._retangle = new System.Windows.Forms.Button();
             this._circle = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -84,16 +88,13 @@ namespace Demo
             this.Polygons = new System.Windows.Forms.Button();
             this.Eraser = new System.Windows.Forms.Button();
             this.Pen = new System.Windows.Forms.Button();
-            this._backgroundchat = new System.Windows.Forms.Panel();
-            this._boxchat = new System.Windows.Forms.ListView();
-            this._sendbox = new System.Windows.Forms.RichTextBox();
-            this._send = new System.Windows.Forms.Button();
             this._chat = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this._backgroundchat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
@@ -101,7 +102,6 @@ namespace Demo
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            this._backgroundchat.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -283,6 +283,56 @@ namespace Demo
             this.panel1.Size = new System.Drawing.Size(1000, 510);
             this.panel1.TabIndex = 5;
             // 
+            // _backgroundchat
+            // 
+            this._backgroundchat.BackColor = System.Drawing.Color.IndianRed;
+            this._backgroundchat.Controls.Add(this._send);
+            this._backgroundchat.Controls.Add(this._sendbox);
+            this._backgroundchat.Controls.Add(this._boxchat);
+            this._backgroundchat.Location = new System.Drawing.Point(350, 130);
+            this._backgroundchat.Name = "_backgroundchat";
+            this._backgroundchat.Size = new System.Drawing.Size(339, 229);
+            this._backgroundchat.TabIndex = 1;
+            // 
+            // _send
+            // 
+            this._send.Location = new System.Drawing.Point(249, 188);
+            this._send.Name = "_send";
+            this._send.Size = new System.Drawing.Size(75, 23);
+            this._send.TabIndex = 2;
+            this._send.Text = "Send";
+            this._send.UseVisualStyleBackColor = true;
+            // 
+            // _sendbox
+            // 
+            this._sendbox.Location = new System.Drawing.Point(3, 175);
+            this._sendbox.Name = "_sendbox";
+            this._sendbox.Size = new System.Drawing.Size(240, 50);
+            this._sendbox.TabIndex = 1;
+            this._sendbox.Text = "";
+            // 
+            // _boxchat
+            // 
+            this._boxchat.HideSelection = false;
+            this._boxchat.Location = new System.Drawing.Point(3, 3);
+            this._boxchat.Name = "_boxchat";
+            this._boxchat.Size = new System.Drawing.Size(333, 166);
+            this._boxchat.TabIndex = 0;
+            this._boxchat.UseCompatibleStateImageBehavior = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1000, 510);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightGray;
@@ -351,19 +401,6 @@ namespace Demo
             this.color_red.TabIndex = 0;
             this.color_red.UseVisualStyleBackColor = false;
             this.color_red.Click += new System.EventHandler(this.color_red_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 510);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // panel5
             // 
@@ -439,7 +476,7 @@ namespace Demo
             this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.back_polygons);
-            this.panel4.Controls.Add(this._polygons);
+            this.panel4.Controls.Add(this._triangle);
             this.panel4.Controls.Add(this._retangle);
             this.panel4.Controls.Add(this._circle);
             this.panel4.Location = new System.Drawing.Point(1120, 150);
@@ -470,16 +507,16 @@ namespace Demo
             this.back_polygons.UseVisualStyleBackColor = true;
             this.back_polygons.Click += new System.EventHandler(this.button1_Click);
             // 
-            // _polygons
+            // _triangle
             // 
-            this._polygons.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_polygons.BackgroundImage")));
-            this._polygons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this._polygons.Location = new System.Drawing.Point(15, 130);
-            this._polygons.Name = "_polygons";
-            this._polygons.Size = new System.Drawing.Size(30, 30);
-            this._polygons.TabIndex = 2;
-            this._polygons.UseVisualStyleBackColor = true;
-            this._polygons.Click += new System.EventHandler(this._polygons_Click);
+            this._triangle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_triangle.BackgroundImage")));
+            this._triangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this._triangle.Location = new System.Drawing.Point(15, 130);
+            this._triangle.Name = "_triangle";
+            this._triangle.Size = new System.Drawing.Size(30, 30);
+            this._triangle.TabIndex = 2;
+            this._triangle.UseVisualStyleBackColor = true;
+            this._triangle.Click += new System.EventHandler(this._polygons_Click);
             // 
             // _retangle
             // 
@@ -645,43 +682,6 @@ namespace Demo
             this.Pen.UseVisualStyleBackColor = true;
             this.Pen.Click += new System.EventHandler(this.Pen_Click);
             // 
-            // _backgroundchat
-            // 
-            this._backgroundchat.BackColor = System.Drawing.Color.IndianRed;
-            this._backgroundchat.Controls.Add(this._send);
-            this._backgroundchat.Controls.Add(this._sendbox);
-            this._backgroundchat.Controls.Add(this._boxchat);
-            this._backgroundchat.Location = new System.Drawing.Point(350, 130);
-            this._backgroundchat.Name = "_backgroundchat";
-            this._backgroundchat.Size = new System.Drawing.Size(339, 229);
-            this._backgroundchat.TabIndex = 1;
-            // 
-            // _boxchat
-            // 
-            this._boxchat.HideSelection = false;
-            this._boxchat.Location = new System.Drawing.Point(3, 3);
-            this._boxchat.Name = "_boxchat";
-            this._boxchat.Size = new System.Drawing.Size(333, 166);
-            this._boxchat.TabIndex = 0;
-            this._boxchat.UseCompatibleStateImageBehavior = false;
-            // 
-            // _sendbox
-            // 
-            this._sendbox.Location = new System.Drawing.Point(3, 175);
-            this._sendbox.Name = "_sendbox";
-            this._sendbox.Size = new System.Drawing.Size(240, 50);
-            this._sendbox.TabIndex = 1;
-            this._sendbox.Text = "";
-            // 
-            // _send
-            // 
-            this._send.Location = new System.Drawing.Point(249, 188);
-            this._send.Name = "_send";
-            this._send.Size = new System.Drawing.Size(75, 23);
-            this._send.TabIndex = 2;
-            this._send.Text = "Send";
-            this._send.UseVisualStyleBackColor = true;
-            // 
             // _chat
             // 
             this._chat.Location = new System.Drawing.Point(1105, 39);
@@ -714,9 +714,10 @@ namespace Demo
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this._backgroundchat.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -724,7 +725,6 @@ namespace Demo
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
-            this._backgroundchat.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -770,7 +770,7 @@ namespace Demo
         private Panel panel4;
         private PictureBox pictureBox3;
         private Button back_polygons;
-        private Button _polygons;
+        private Button _triangle;
         private Button _retangle;
         private Button _circle;
         private Panel panel5;
