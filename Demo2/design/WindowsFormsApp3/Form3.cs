@@ -42,7 +42,9 @@ namespace WindowsFormsApp1
         {
             if (forgot.Text == "Forgot password?")
             {
-
+                this.Hide();
+                Form2 fg = new Form2();
+                fg.Show();
             }
         }
         private bool isValid()
