@@ -48,6 +48,7 @@ namespace tcp_server
             TcpListener server = null;
             try
             {
+                // thực hiện lắng nghe từ port 8080 với ip bất kỳ
                 int port = 8080;
                 IPAddress ipadd = IPAddress.Any;
                 server = new TcpListener(ipadd, port);
@@ -192,8 +193,8 @@ namespace tcp_server
                     }
 
 
-                    //Console.WriteLine(rcv);
 
+                    // gủi lệnh vẽ về cho các client khác qua stream của từng client trong client list khác với client gửi cho server
                     foreach (TcpClient otherClient in clients)
                     {
                         if (otherClient != client)
