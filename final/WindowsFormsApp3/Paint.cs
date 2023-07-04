@@ -176,6 +176,7 @@ namespace Demo
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            //Kết nối với server qua port 8080 ở địa chỉ ip của server
             int port = 8080;
             IPAddress ipadd = IPAddress.Parse("127.0.0.1");
 
@@ -189,6 +190,8 @@ namespace Demo
 
             CheckForIllegalCrossThreadCalls = false;
             cancellationTokenSource = new CancellationTokenSource();
+
+            // chạy task nhận dữ liệu từ server
             cancellationToken = cancellationTokenSource.Token;
             Task.Run(() => ReceiveData(cancellationToken));
 
@@ -294,23 +297,14 @@ namespace Demo
                                 command += $" {index}\n";
                             }
                         }
-
-
-
+                        // ghi lệnh vẽ vào luồng lấy từ client gửi tới server
                         NetworkStream ns = client.GetStream();
                         byte[] sendData = new byte[1024];
-
-
-
-
-                        byte[] encryptedBytes = EncryptMessage(command, key);
+                        byte[] encryptedBytes = EncryptMessage(command, key);    // mã hóa dữ liệu gửi
                         string encryptedText = Convert.ToBase64String(encryptedBytes);
-
                         sendData = Encoding.ASCII.GetBytes(encryptedText);
                         ns.Write(sendData, 0, sendData.Length);
                     }
-
-
                 }
                 catch (Exception ex)
                 {
@@ -639,9 +633,6 @@ namespace Demo
                 string trimmed = control.Substring(0, newlineIndex);
                 control = trimmed;
             }
-
-
-
             string[] commandParts = command_draw.Split(' ');
             if (commandParts.Length != 7)
             {
@@ -649,9 +640,7 @@ namespace Demo
                 return;
             }
 
-
             int x1 = 0, y1 = 0, x2 = 0, y2 = 0, color = 0, index = 0;
-
             bool parseSuccess = int.TryParse(commandParts[1], out x1)
                 && int.TryParse(commandParts[2], out y1)
                 && int.TryParse(commandParts[3], out x2)
@@ -661,41 +650,11 @@ namespace Demo
 
             if (!parseSuccess)
             {
-                
-
                 return;
             }
 
             PaintFromCommand(index, x1, y1, x2, y2, color);
-
-
-
-            //JObject obj = JObject.Parse(control);
-
-
-            //string command = (string)obj["command"];
-
-            //if (command == "draw_line")
-            //{
-            //    int x1 = (int)obj["x1"];
-            //    int y1 = (int)obj["y1"];
-            //    int x2 = (int)obj["x2"];
-            //    int y2 = (int)obj["y2"];
-            //    int color = (int)obj["color"];
-            //    int index = (int)obj["index"];
-
-            //    Paint(index, x1, y1, x2, y2,color);
-            //}
-            //else if ( command == "draw_ellipse" || command == "draw_rec")
-            //{
-            //    int x1 = (int)obj["cX"];
-            //    int y1 = (int)obj["cY"];
-            //    int x2 = (int)obj["sX"];
-            //    int y2 = (int)obj["sY"];
-            //    int color = (int)obj["color"];
-            //    int index = (int)obj["index"];
-
-            //    Paint(index, x1, y1, x2, y2, color);
+            
 
             //}
 
@@ -711,8 +670,6 @@ namespace Demo
 
 
         byte[] imageData = null;
-
-
         //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         //{
         //    cancellationTokenSource.Cancel();
@@ -763,7 +720,7 @@ namespace Demo
             try
             {
                 while (!cancellationToken.IsCancellationRequested)
-                {
+                {    // nhận dữ liệu gửi về từ server ở trong luồng lấy từ client
                     stream = client.GetStream();
                     bytes = await stream.ReadAsync(buffer, 0, buffer.Length);
                     stream.Flush();
@@ -783,14 +740,11 @@ namespace Demo
                         Console.WriteLine(decryptedMessage);
 
                         // Update the TextBox control on the main thread
-                    
                         Process_command(decryptedMessage);
-
                     }
                     catch
                     {
                         int temp_section;
-
                         bool check = int.TryParse(returnData, out temp_section);
                         if (check)
                         {
@@ -803,10 +757,8 @@ namespace Demo
                             if (returnData.Contains("update_data"))
                             {
                                 Console.WriteLine("update " + sectionValue.ToString());
-
                                 Image image = pictureBox1.Image;
                                 byte[] imageData = null;
-
                                 if (image != null)
                                 {
                                     using (MemoryStream ms = new MemoryStream())
@@ -821,9 +773,6 @@ namespace Demo
 
                                         stream.Write(temp_array, 0, temp_array.Length);
                                         stream.Flush();
-
-
-
                                     }
                                 }
                             }
