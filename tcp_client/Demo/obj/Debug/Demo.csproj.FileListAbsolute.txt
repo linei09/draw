@@ -34,3 +34,17 @@ C:\Users\USER\Desktop\draw-master\Demo\Demo\obj\Debug\Demo.csproj.CoreCompileInp
 C:\Users\USER\Desktop\draw-master\Demo\Demo\obj\Debug\Demo.csproj.CopyComplete
 C:\Users\USER\Desktop\draw-master\Demo\Demo\obj\Debug\Demo.exe
 C:\Users\USER\Desktop\draw-master\Demo\Demo\obj\Debug\Demo.pdb
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\bin\Debug\Demo.exe.config
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\bin\Debug\Demo.exe
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\bin\Debug\Demo.pdb
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.csproj.AssemblyReference.cache
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.csproj.SuggestedBindingRedirects.cache
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.Form1.resources
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.Properties.Resources.resources
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.csproj.GenerateResource.cache
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.csproj.CopyComplete
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.exe
+C:\Users\yenly\Documents\GitHub\draw\tcp_client\Demo\obj\Debug\Demo.pdb

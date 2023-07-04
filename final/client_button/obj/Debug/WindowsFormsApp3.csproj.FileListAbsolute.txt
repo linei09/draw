@@ -1,0 +1,42 @@
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\dangh\Desktop\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp1.createaccount.resources
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp1.createaccount.resources
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\21520\Downloads\design\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.AssemblyReference.cache
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.SuggestedBindingRedirects.cache
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp1.createaccount.resources
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\Demo.Form1.resources
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\bin\Debug\Database1.mdf
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\bin\Debug\Database1_log.ldf
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Forgot_pass.resources
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\bin\Debug\Rijndael256.dll
+C:\Users\21520\OneDrive - Trường ĐH CNTT - University of Information Technology\TaiLieu\Ki_4\Lap_trinh_mang_can_ban\Demo2\design\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete

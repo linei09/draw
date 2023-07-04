@@ -105,7 +105,7 @@ namespace Demo
         // ham nhan de xu ly command
         private void Form1_Load(object sender, EventArgs e)
         {
-            client = new TcpClient("127.0.0.1", 6903);
+            client = new TcpClient("171.246.132.229", 8080);
             stream = client.GetStream();
 
             Thread t = new Thread(new ThreadStart(ReceiveData));
